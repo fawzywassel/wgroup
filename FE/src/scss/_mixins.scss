@@ -1,0 +1,29 @@
+// Scroll
+
+@mixin scrollSecondary() {
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $light-color-01;
+    background-clip: padding-box;
+    border-radius: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: $light-color-01;
+  }
+}
+
+// Responsive
+
+@mixin mobile() {
+  @media (max-width: 576px) {
+    @content;
+  }
+}

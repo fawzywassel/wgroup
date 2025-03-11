@@ -1,0 +1,51 @@
+@import '../../../../../scss/all';
+
+:host {
+  ::ng-deep {
+    nav {
+      height: 15vh;
+      width: 100%;
+      background-color: $w-property-dark;
+      .nav-container {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        // padding-top: 1.5rem;
+        // padding-bottom: 1.5rem;
+        .logo {
+          img {
+            height: 100%;
+          }
+        }
+        .links {
+          display: flex;
+          .gold-btn {
+            box-shadow: none !important;
+            border-radius: 25px;
+            margin-inline-start: 3rem;
+            border: none;
+            animation: scaleButton 1s infinite alternate ease-in-out;
+          }
+          ul {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            li {
+              cursor: pointer;
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes scaleButton {
+  0% {
+    transform: scale(1); /* 100% size */
+  }
+  100% {
+    transform: scale(0.8); /* 80% size */
+  }
+}

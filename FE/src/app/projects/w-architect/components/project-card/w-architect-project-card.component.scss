@@ -1,0 +1,41 @@
+@import '../../../../../scss/all';
+
+:host {
+  display: flex;
+  ::ng-deep {
+    .card {
+      height: 300px !important;
+      width: 100% !important;
+      background-position: 50% !important;
+      background-size: cover !important;
+      position: relative;
+      overflow: hidden;
+      transition: all 1.5s;
+      cursor: pointer;
+      .layer {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba($color: $black, $alpha: 0.5);
+      }
+      .details {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        p {
+          color: $primary-gold;
+          font-size: 3rem;
+          line-height: 3rem;
+          font-weight: bold;
+          text-shadow: 1px 1px 2px $black;
+        }
+      }
+    }
+  }
+}

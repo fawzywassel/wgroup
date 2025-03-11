@@ -1,0 +1,160 @@
+@import '../../../../../scss/all';
+
+:host {
+  ::ng-deep {
+    .project-details {
+      &__header {
+        width: 100% !important;
+        height: 85vh;
+        .image {
+          height: 100% !important;
+          width: 100% !important;
+          background-position: 50% !important;
+          background-size: cover !important;
+          padding: 3rem;
+          .text {
+            text-align: center !important;
+            width: max-content !important;
+          }
+          h2 {
+            font-size: 1.5rem;
+            line-height: 2rem !important;
+            color: $primary-gold;
+            &.smaller-font {
+              font-size: 1.25rem;
+            }
+            &.diff-font {
+              font-size: 2rem;
+              &.smaller-font {
+                font-size: 1.5rem;
+              }
+            }
+          }
+        }
+      }
+      &__main,
+      .video {
+        width: 100% !important;
+        height: 100vh;
+        position: relative;
+        .image {
+          height: 100% !important;
+          width: 42.5% !important;
+          margin: auto;
+          border-radius: 50% 50% 0 0;
+          overflow: hidden;
+          background-position: 50% !important;
+          background-size: cover !important;
+        }
+        .text {
+          position: absolute;
+          top: 40%;
+          transform: translateY(-50%);
+          z-index: 5;
+          left: 0;
+          padding-left: 7rem;
+          color: $white;
+          width: calc(35%);
+          text-align: left;
+          .title {
+            font-size: 5rem;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px #000;
+          }
+          .description {
+            font-size: 1.2rem;
+            color: $light-color-01;
+            text-shadow: 1px 1px 1px #000;
+          }
+          .button {
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            border: 2px solid $white;
+            color: $white;
+            transition: transform 0.5s;
+            margin-top: 1.5rem;
+            cursor: pointer;
+            &:hover {
+              transform: translateY(-0.5rem);
+              transition: transform 0.5s;
+            }
+          }
+        }
+        .icon {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: 5;
+          right: 15rem;
+          color: $white;
+          width: calc(35%);
+          i {
+            font-weight: 100;
+            font-size: 7rem;
+            border: 2px solid $white;
+            padding: 2rem;
+            border-radius: 50%;
+            cursor: pointer;
+          }
+        }
+      }
+      .video {
+        .image {
+          width: 100% !important;
+          border-radius: 0;
+        }
+      }
+      &__content {
+        .row {
+          display: flex;
+          height: 100vh;
+          .column {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            .nested-row {
+              display: flex;
+              height: 50vh;
+            }
+          }
+          .image {
+            height: 100% !important;
+            width: 100% !important;
+            background-position: 50% !important;
+            background-size: cover !important;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .p-dialog-mask.p-component-overlay {
+      background-color: rgba($color: #000000, $alpha: 0.8) !important;
+    }
+    .image-dialog {
+      .p-dialog {
+        width: max-content !important;
+        height: 90vh !important;
+        position: relative;
+        border-radius: 0.5rem !important;
+        overflow: hidden;
+        .p-dialog-header {
+          position: absolute;
+          padding: 0 !important;
+          background: none;
+          right: 0;
+          top: 0;
+        }
+        .p-dialog-content {
+          height: 90vh !important;
+          padding: 0 !important;
+          overflow: hidden;
+          img {
+            height: 90vh !important;
+          }
+        }
+      }
+    }
+  }
+}

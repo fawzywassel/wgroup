@@ -1,0 +1,33 @@
+<div class="loader" *ngIf="showLoader"></div>
+
+<div class="g-padding" *ngIf="!showLoader">
+    <div class="export">
+        <img [src]="images.lightLogos.wProperty" />
+        <button class="button" [disabled]="!requests?.length" (click)="exportData()">
+            استخراج البيانات
+            <i class="pi pi-file-excel"></i>
+        </button>
+    </div>
+    <div class="table" *ngIf="requests?.length">
+        <p-treeTable [value]="requests" [columns]="cols" [paginator]="true" [rows]="10" [scrollable]="true">
+            <ng-template pTemplate="header" let-columns>
+                <tr>
+                    <th *ngFor="let col of columns" [ngClass]="col.field" [ttSortableColumn]="col.field">
+                        {{ col.header }}
+                        <p-treeTableSortIcon [field]="col.field"></p-treeTableSortIcon>
+                    </th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-rowNode let-rowData="rowData" let-columns="columns">
+                <tr [ttRow]="rowNode">
+                    <td *ngFor="let col of columns; let i = index">
+                        <i class="pi pi-trash delete-row" *ngIf="col.field === 'delete'"
+                            (click)="deleteRow(rowData)"></i>
+                        <span *ngIf="col.field !== 'delete'" [innerHTML]="rowData?.[col.field]"></span>
+                    </td>
+                </tr>
+            </ng-template>
+        </p-treeTable>
+
+    </div>
+</div>

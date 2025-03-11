@@ -1,0 +1,92 @@
+<div class="project-details">
+  <div class="project-details__header" *ngIf="projectDetails?.wImage">
+    <div
+      class="image"
+      [style.background]="'url(' + projectDetails?.wImage + ')'"
+    >
+      <div class="text">
+        <h2
+          class="diff-font"
+          [ngClass]="{ 'smaller-font': projectDetails.smallerFont }"
+          [innerHTML]="projectDetails.name"
+        ></h2>
+        <h2
+          [ngClass]="{ 'smaller-font': projectDetails.smallerFont }"
+          [innerHTML]="projectDetails.nameEn"
+        ></h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-details__content">
+    <div class="row" *ngFor="let item of projectDetails.images | chunk : 5">
+      <div class="column">
+        <div
+          class="image add-light-layer"
+          (click)="openImageDialog(item[0])"
+          *ngIf="item[0]"
+          [style.background]="'url(' + item[0] + ')'"
+        ></div>
+        <div
+          class="image add-light-layer"
+          (click)="openImageDialog(item[1])"
+          *ngIf="item[1]"
+          [style.background]="'url(' + item[1] + ')'"
+        ></div>
+      </div>
+      <div class="column" *ngIf="item[2]">
+        <div
+          class="image add-light-layer"
+          (click)="openImageDialog(item[2])"
+          *ngIf="item[2]"
+          [style.background]="'url(' + item[2] + ')'"
+        ></div>
+        <div class="nested-row" *ngIf="item[3]">
+          <div
+            class="image add-light-layer"
+            (click)="openImageDialog(item[3])"
+            *ngIf="item[3]"
+            [style.background]="'url(' + item[3] + ')'"
+          ></div>
+          <div
+            class="image add-light-layer"
+            (click)="openImageDialog(item[4])"
+            *ngIf="item[4]"
+            [style.background]="'url(' + item[4] + ')'"
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="video" *ngIf="projectDetails.videoURL">
+      <div class="icon">
+        <i [class]="'pi pi-play'" (click)="openVideoDialog()"></i>
+      </div>
+      <div
+        class="image add-black-layer"
+        [style.background]="'url(' + projectDetails?.videoImage + ')'"
+      ></div>
+    </div>
+  </div>
+</div>
+
+<div class="image-dialog">
+  <p-dialog
+    header=""
+    [modal]="true"
+    [draggable]="false"
+    [dismissableMask]="true"
+    [(visible)]="isImageDialogVisible"
+  >
+    <div class="content">
+      <img class="image" [src]="activeImage" />
+    </div>
+  </p-dialog>
+</div>
+
+<app-youtube-video-dialog
+  [visible]="isVideoDialogVisible"
+  [title]="projectDetails.name"
+  [url]="projectDetails.videoURL"
+  (onHideDialog)="hideVideoDialog()"
+></app-youtube-video-dialog>

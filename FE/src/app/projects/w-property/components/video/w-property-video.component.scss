@@ -1,0 +1,10 @@
+@import "../../../../../scss/all";
+
+:host {
+  ::ng-deep {
+    iframe {
+      border-radius: 0.5rem;
+      box-shadow: 1px 1px 7px $light-color-01 !important;
+    }
+  }
+}

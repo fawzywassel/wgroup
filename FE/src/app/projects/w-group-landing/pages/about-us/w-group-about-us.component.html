@@ -1,0 +1,32 @@
+<div class="about-us">
+    <div class="about-us__header">
+        <app-w-group-sections-header [image]="image" [title]="title"
+            [subtitle]="subtitle"></app-w-group-sections-header>
+    </div>
+    <div class="about-us__content g-padding">
+        <div class="item" *ngFor="let item of aboutUsList">
+            <h3> {{item.title}}</h3>
+            <p *ngFor="let desc of item.desc"> {{desc}} </p>
+            <ol *ngIf="item.ol">
+                <li *ngFor="let li of item.ol">
+                    <p>{{li.label}}</p>
+                    <ul *ngIf="li.ul">
+                        <li *ngFor="let item of li.ul">
+                            <p>{{item}} </p>
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+            <ul *ngIf="item.ul">
+                <li *ngFor="let li of item.ul">
+                    <p>{{li}} </p>
+                </li>
+
+            </ul>
+
+            <p *ngFor="let desc of item.desc2"> {{desc}} </p>
+
+        </div>
+    </div>
+
+</div>

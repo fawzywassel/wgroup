@@ -1,0 +1,22 @@
+<div
+  class="brand"
+  (click)="routeToPage()"
+  [ngClass]="{ disabled: details.disabled }"
+>
+  <div class="brand__container" [style.background]="'url(' + details.bg + ')'">
+    <div
+      class="brand__container__layer g-padding"
+      [ngClass]="{
+        'space-between': details.alignEnd,
+        'dark-layer': details.addDarkLayer
+      }"
+    >
+      <div
+        *ngIf="details.label"
+        class="label diff-font"
+        [innerHtml]="details.label"
+      ></div>
+      <img [src]="details.logo" [alt]="'logo`'" />
+    </div>
+  </div>
+</div>

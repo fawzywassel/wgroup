@@ -1,0 +1,19 @@
+<div class="loader" *ngIf="showLoader"></div>
+
+<div class="login" *ngIf="!showLoader">
+    <div class="box">
+        <form [formGroup]="form">
+            <label> كود المستخدم </label>
+            <input type="text" pInputText [formControlName]="'id'" />
+            <label> كلمة المرور </label>
+            <p-password formControlName="password" [feedback]="false" />
+            <!-- <input type="password" pInputText  [formControlName]="'password'" /> -->
+        </form>
+        <div class="submit-button">
+            <button class="button gold-btn" [disabled]="!form.valid" (click)="checkLogin()"> تسجيل الدخول </button>
+        </div>
+
+    </div>
+</div>
+
+<p-toast position="top-right" />

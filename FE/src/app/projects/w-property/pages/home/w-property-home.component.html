@@ -1,0 +1,87 @@
+<div class="home">
+  <div class="home__header">
+    <app-w-property-header></app-w-property-header>
+  </div>
+
+  <div class="home__content">
+    <section class="video-about g-padding diff-bg">
+      <div class="section-container">
+        <div class="about-us">
+          <h3 class="diff-font">نبذة عن القطاع</h3>
+          <p>
+            في ظل النمو السياحي الكبير بالسعودية الذي تجاوز 100 مليون زائر في
+            2023، والمتوقع أن يصل إلى 150 مليون بحلول 2030، تزداد الحاجة إلى
+            حلول إقامة مريحة ومتميزة. تطبيقات مثل Gathering, Airbnb تقود هذا
+            التحول في السوق، حيث يوفر للسائح بأنه كل من يقضي ليلة واحدة على
+            الأقل، تقدم له وحدات سكنية تجمع بين الراحة والتميز لتلبية الطلب
+            المتزايد ومواكبة هذا النمو الهائل.
+          </p>
+        </div>
+        <div class="video">
+          <app-w-property-video></app-w-property-video>
+        </div>
+      </div>
+    </section>
+
+    <section class="partners g-padding">
+      <div class="logos">
+        <a
+          [href]="logo.link"
+          target="_blank"
+          *ngFor="let logo of partners.logos"
+        >
+          <img [src]="logo.image" width="50px" height="50px" />
+        </a>
+      </div>
+      <div class="text">
+        <h2 class="title diff-font">{{ partners.title }}</h2>
+        <p class="description">{{ partners.description }}</p>
+        <div class="items">
+          <div class="item card-white" *ngFor="let item of partners.items">
+            <i [class]="item.icon"></i>
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.description }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects g-padding diff-bg">
+      <h2 class="gold-title diff-font">مشاريعنا</h2>
+      <div class="projects-list">
+        <app-w-property-project-card
+          *ngFor="let item of projects | slice : 0 : 3"
+          [details]="item"
+        ></app-w-property-project-card>
+      </div>
+      <button
+        class="button gold-btn"
+        (click)="routeToPage('w-property/projects')"
+      >
+        مشاهدة المزيد من المشاريع
+      </button>
+    </section>
+
+    <app-w-property-about-us-section></app-w-property-about-us-section>
+
+    <section class="feedback g-padding diff-bg">
+      <h2 class="gold-title diff-font">تقييمات العملاء</h2>
+      <div class="feedback-list">
+        <app-w-property-feedback-card
+          *ngFor="let item of feedbacks | slice : 0 : 3"
+          [url]="item"
+        ></app-w-property-feedback-card>
+      </div>
+      <button
+        class="button gold-btn"
+        (click)="routeToPage('w-property/feedbacks')"
+      >
+        مشاهدة المزيد من التقييمات
+      </button>
+    </section>
+
+    <section class="request-form g-padding" id="request-form">
+      <app-w-property-request-form></app-w-property-request-form>
+    </section>
+  </div>
+</div>

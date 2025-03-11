@@ -1,0 +1,43 @@
+@import '../../../../../scss/all';
+:host {
+  ::ng-deep {
+    .header-container {
+      .layer {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+    }
+    .projects {
+      &__content {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        app-w-architect-project-card {
+          &:nth-of-type(even) {
+            .card .details {
+              left: 15% !important;
+              right: unset !important;
+            }
+          }
+          &:nth-of-type(odd) {
+            .card .details {
+              right: 15% !important;
+              left: unset !important;
+            }
+          }
+        }
+
+        &__title {
+          h2 {
+            margin-left: auto !important;
+            margin-right: auto !important;
+            width: max-content;
+            font-size: 4rem;
+          }
+        }
+        &__list {
+          display: grid;
+          grid-template-columns: 1fr;
+        }
+      }
+    }
+  }
+}

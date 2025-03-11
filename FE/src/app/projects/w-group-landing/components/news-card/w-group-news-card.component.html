@@ -1,0 +1,24 @@
+<div class="card" (click)="showDialog()">
+  <div
+    class="image"
+    [style.background]="'url(' + newsDetails.image + ')'"
+  ></div>
+  <div class="text">
+    <div class="title">
+      <p>{{ newsDetails.title }}</p>
+    </div>
+    <div class="description" *ngIf="newsDetails.description">
+      <p>{{ newsDetails.description }}</p>
+    </div>
+    <div class="category">
+      <p>{{ newsDetails.category }}</p>
+    </div>
+  </div>
+</div>
+
+<app-youtube-video-dialog
+  [visible]="visible"
+  [title]="newsDetails.title"
+  [url]="newsDetails.videoURL"
+  (onHideDialog)="hideDialog()"
+></app-youtube-video-dialog>

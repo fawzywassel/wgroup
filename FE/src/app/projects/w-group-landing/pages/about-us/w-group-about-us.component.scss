@@ -1,0 +1,50 @@
+@import "../../../../../scss/all";
+
+:host {
+  .about-us {
+    &__content {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+      .item {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        background-color: $white;
+        border: 1px solid $light-color-05;
+        border-radius: 0.5rem;
+        padding: 2rem;
+        h3 {
+          font-size: 2.5rem;
+          color: $primary-gold;
+          margin-bottom: 1rem;
+        }
+        p {
+          color: $w-group-title;
+          font-size: 1.25rem;
+        }
+        ol {
+          & > li {
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            & > p {
+              font-weight: 700;
+            }
+            ul {
+              margin-inline-start: 2.5rem;
+              li {
+                font-weight: normal;
+              }
+            }
+          }
+        }
+        ul {
+          list-style-type: circle !important;
+          margin-inline-start: 1.25rem;
+        }
+      }
+    }
+  }
+}

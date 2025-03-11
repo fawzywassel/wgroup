@@ -1,0 +1,56 @@
+<div class="home">
+  <div class="home__header">
+    <app-w-group-header></app-w-group-header>
+  </div>
+
+  <div class="home__content">
+    <section class="numbers g-padding">
+      <div class="slogan">
+        <div class="logo">
+          <img [src]="images.coloredLogos.wGroup" />
+        </div>
+        <div class="text">
+          <p class="diff-font">العقار هو رؤيتنا والعمارة هي شغفنا</p>
+        </div>
+      </div>
+
+      <!-- <div class="statistics">
+                <div class="statistics__item" *ngFor="let item of statistics">
+                    <div class="icon">
+                        <i [class]="item.icon"></i>
+                    </div>
+                    <div class="text">
+                        <p>{{item.number}}</p>
+                    </div>
+                </div>
+            </div> -->
+    </section>
+
+    <section class="brands">
+      <div *ngFor="let item of brands">
+        <app-w-group-brand [details]="item"></app-w-group-brand>
+      </div>
+    </section>
+
+    <section class="news g-padding">
+      <h2 class="gold-title diff-font">المركز الإعلامي</h2>
+      <div class="news-list">
+        <app-w-group-news-card
+          *ngFor="let item of news | slice : 0 : 4"
+          [newsDetails]="item"
+        ></app-w-group-news-card>
+      </div>
+      <button class="button gold-btn" (click)="routeToPage('news')">
+        الذهاب إلي المركز الاعلامي
+      </button>
+    </section>
+
+    <section class="map g-padding">
+      <h2 class="gold-title diff-font">مواقع مشاريعنا</h2>
+      <iframe
+        src="https://www.google.com/maps/d/embed?mid=1UdJynhnj_E7xCOz-DEzupN6xcdsvTN4&ehbc=2E312F&noprof=1"
+        height="480"
+      ></iframe>
+    </section>
+  </div>
+</div>

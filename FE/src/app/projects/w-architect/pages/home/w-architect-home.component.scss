@@ -1,0 +1,168 @@
+@import '../../../../../scss/all';
+
+:host {
+  ::ng-deep {
+    .home {
+      &__header {
+        direction: ltr;
+        * {
+          direction: ltr;
+        }
+
+        .p-galleria {
+          .p-galleria-item-nav {
+            z-index: 3;
+            &:not(.p-disabled):hover {
+              background: none !important;
+            }
+          }
+          .p-galleria-indicators {
+            width: max-content !important;
+            height: auto;
+            left: 50% !important;
+            transform: translateX(-50%);
+            background: none !important;
+            gap: 0.75rem;
+            .p-galleria-indicator {
+              margin: 0 !important;
+              button {
+                padding: 0;
+                width: 2px !important;
+                height: 20px !important;
+                border-radius: 0 !important;
+                background-color: $light-color-01;
+                border: none !important;
+              }
+              &.p-highlight {
+                button {
+                  height: 40px !important;
+                  background-color: $white;
+                }
+              }
+            }
+          }
+          .p-galleria-item-prev,
+          .p-galleria-item-next {
+            border: 2px solid $light-color-01;
+            border-radius: 50%;
+            width: 2.5rem;
+            height: 2.5rem;
+            margin: 0 2rem;
+            chevronrighticon,
+            chevronlefticon {
+              width: 10px;
+            }
+          }
+          .p-galleria-item-container {
+            .p-galleria-item {
+              .container {
+                height: 85vh;
+                width: 100%;
+                display: block;
+                background-position: 50% !important;
+                background-size: cover !important;
+                transition: background 0.5s ease-in-out;
+                .details {
+                  position: absolute;
+                  display: block;
+                  width: max-content;
+                  height: max-content;
+                  top: 50%;
+                  left: 15%;
+                  transform: translateY(-50%);
+                  z-index: 5;
+                  h2 {
+                    color: $white;
+                    font-weight: bold;
+                    font-size: 5rem;
+                    text-shadow: 1px 1px 2px #000;
+                  }
+                  button {
+                    color: $white;
+                    font-weight: bold;
+                    font-size: 1.25rem;
+                    cursor: pointer;
+                  }
+                }
+              }
+              .layer {
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                // background: linear-gradient(
+                //   45deg,
+                //   rgba(0, 0, 0, 0.8) 50%,
+                //   transparent
+                // );
+                background-color: rgba($color: $black, $alpha: 0.5);
+              }
+            }
+          }
+        }
+      }
+      &__content {
+        section.projects {
+          // padding-top: 6rem;
+          padding-bottom: 6rem;
+          h2 {
+            font-size: 4rem;
+          }
+          .projects-list {
+            display: grid;
+            grid-template-columns: 1fr;
+
+            .card {
+              height: 375px !important;
+              width: 100% !important;
+              background-position: 50% !important;
+              background-size: cover !important;
+              position: relative;
+              overflow: hidden;
+              transition: all 1.5s;
+              cursor: pointer;
+              .layer {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: rgba($color: $black, $alpha: 0.5);
+              }
+              .details {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                p {
+                  color: $primary-gold;
+                  font-size: 3rem;
+                  line-height: 3rem;
+                  font-weight: bold;
+                  text-shadow: 1px 1px 2px $black;
+                }
+              }
+              &:nth-of-type(even) .details {
+                left: 15% !important;
+                right: unset !important;
+              }
+              &:nth-of-type(odd) .details {
+                right: 15% !important;
+                left: unset !important;
+              }
+            }
+          }
+          .gold-btn {
+            display: flex;
+            margin: 3rem auto 0 !important;
+          }
+        }
+      }
+    }
+  }
+}

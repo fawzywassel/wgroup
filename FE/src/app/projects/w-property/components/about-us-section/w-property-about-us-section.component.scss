@@ -1,0 +1,252 @@
+@import '../../../../../scss/all';
+
+:host {
+  .about-us {
+    &__content {
+      section {
+        background-color: $white;
+        width: 100%;
+        padding: 4rem !important;
+        position: relative;
+
+        h2 {
+          position: relative;
+          width: max-content;
+          font-size: 4rem;
+          margin-bottom: 4rem !important;
+        }
+
+        .vision {
+          margin-bottom: 4rem;
+        }
+
+        &.about {
+          background-color: $primary-gold;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          * {
+            color: $white;
+          }
+        }
+
+        &.vision-and-message {
+          .vision,
+          .message {
+            h4 {
+              margin-bottom: 1rem !important;
+              font-size: 2.5rem;
+            }
+            p {
+              width: 100% !important;
+              padding: 0 4rem !important;
+            }
+          }
+        }
+
+        &.why-ksa {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          p {
+            width: 60% !important;
+            margin-bottom: 3rem !important;
+            text-align: center;
+          }
+
+          .images {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1rem;
+            width: 50rem;
+            div {
+              width: 100%;
+              height: 35rem;
+              border-radius: 0.5rem !important;
+              background-position: 50% 50% !important;
+              background-size: cover !important;
+              box-shadow: 2px 2px 1px $light-color-06 !important ;
+            }
+          }
+        }
+
+        &.short-term-rent {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          &.services {
+            display: grid;
+            grid-template-columns: 40% 1fr !important;
+            gap: 3rem;
+            align-items: start;
+            .content {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+            }
+            p {
+              width: 80% !important;
+              text-align: right;
+            }
+            .icons {
+              grid-template-columns: 1fr 1fr 1fr !important;
+              width: unset !important;
+              padding-top: 11rem;
+              .item {
+                box-shadow: none !important;
+                padding: 0 !important;
+                & > img {
+                  height: 3.5rem;
+                }
+              }
+            }
+          }
+          p {
+            width: 60% !important;
+            margin-bottom: 3rem !important;
+            text-align: center;
+          }
+
+          .icons {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 2rem;
+            width: 80rem;
+            .item {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 1rem;
+              text-align: center;
+              color: $primary-gold !important;
+              background: $white;
+              padding: 2rem;
+              border-radius: 0.5rem;
+              box-shadow: 2px 2px 1px $light-color-05 !important;
+              .images-list {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 0.5rem;
+                img {
+                  height: 2.25rem;
+                  filter: drop-shadow(1px 1px 0px $black);
+                }
+              }
+              & > img {
+                height: 5rem;
+                filter: drop-shadow(1px 1px 0px $black);
+              }
+              span {
+                display: block;
+                font-size: 1.5rem;
+                font-weight: 500;
+              }
+            }
+          }
+        }
+
+        &.why-short-term-rent {
+          display: flex;
+          flex-direction: column;
+          p {
+            width: 60% !important;
+            margin-bottom: 3rem !important;
+          }
+
+          .icons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            .item {
+              display: flex;
+              align-items: center;
+              gap: 2rem;
+              color: $primary-gold !important;
+              .img {
+                padding: 1rem;
+                width: 5rem;
+                height: 5rem;
+
+                img {
+                  width: 100%;
+                  filter: drop-shadow(1px 1px 0px $black);
+                }
+              }
+              span {
+                display: block;
+                font-size: 1.5rem;
+                font-weight: 500;
+              }
+            }
+          }
+
+          .chart {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 3rem;
+            width: 60%;
+            margin: 3rem auto !important;
+            p-chart {
+              background: $light-color-03;
+              padding: 2rem;
+              border-radius: 0.5rem;
+              box-shadow: 2px 2px 1px $light-color-05 !important;
+            }
+            h3 {
+              text-align: center;
+              color: $w-property-dark;
+              font-size: 3rem;
+              font-weight: bold;
+              span {
+                display: block;
+                color: $primary-gold !important;
+              }
+            }
+          }
+        }
+
+        &.steps {
+          h4 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem !important;
+          }
+          .step {
+            margin-bottom: 3rem;
+            position: relative;
+          }
+          .items {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 2rem;
+            margin: auto;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: 16%;
+            right: 16%;
+            top: 85%;
+            .item {
+              color: $primary-gold !important;
+              display: block;
+              font-size: 1.125rem;
+              font-weight: bold;
+              width: 100%;
+              text-align: center;
+            }
+          }
+        }
+
+        p {
+          font-size: 1.5rem;
+          width: 50%;
+        }
+      }
+    }
+  }
+}

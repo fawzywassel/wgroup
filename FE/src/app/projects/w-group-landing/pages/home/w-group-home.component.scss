@@ -1,0 +1,94 @@
+@import '../../../../../scss/all';
+
+.home {
+  &__content {
+    section.numbers {
+      background-color: $light-color-03;
+      div.slogan {
+        // display: grid;
+        // align-items: center;
+        // grid-template-columns: 35% 1fr;
+        // gap: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 3rem;
+        // gap: 1rem;
+        .logo {
+          text-align: center;
+          img {
+            width: 40%;
+          }
+        }
+        .text {
+          margin-top: -3rem;
+          p {
+            margin: 0;
+            font-size: 3rem;
+            font-weight: bold;
+            color: $primary-gold;
+            // width: 80%;
+          }
+        }
+      }
+      div.statistics {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        &__item {
+          background-color: $white;
+          padding: 2rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          gap: 1rem;
+          border-radius: 0.5rem;
+          box-shadow: $shadow-01 !important;
+          .icon {
+            i {
+              font-size: 2.5rem;
+              color: $primary-gold;
+            }
+          }
+          .text {
+            p {
+              font-size: 2rem;
+              color: $w-group-text;
+            }
+          }
+        }
+      }
+    }
+    section.news {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+      background-color: $light-color-03;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      .news-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+    }
+    section.map {
+      padding-top: 2rem;
+      padding-bottom: 6rem;
+      iframe {
+        border-radius: 0.5rem;
+        width: 100%;
+        // width: calc(100vw - 14rem);
+        height: 25rem;
+        border: 1px solid $light-color-02;
+        box-shadow: $shadow-01 !important;
+        margin-top: 2erm;
+      }
+    }
+  }
+}

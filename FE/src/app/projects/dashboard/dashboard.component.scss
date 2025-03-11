@@ -1,0 +1,61 @@
+:host {
+  ::ng-deep {
+    .export {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      img {
+        width: 10rem;
+      }
+      button {
+        background-color: #1d6f42;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+        width: 12rem;
+        height: 3.5rem;
+        border-radius: 0.5rem;
+        font-size: 1.2rem;
+        cursor: pointer;
+        &:disabled {
+          cursor: not-allowed;
+          opacity: 0.5;
+        }
+        i {
+          font-size: 1.5rem;
+        }
+      }
+    }
+    .p-paginator {
+      direction: ltr;
+    }
+    table {
+      th,
+      td {
+        text-align: center !important;
+        .p-sortable-column-icon {
+          display: none;
+        }
+      }
+      .delete-row {
+        color: red;
+        padding: 4px;
+        font-size: 1.25rem;
+        cursor: pointer;
+      }
+      th {
+        &.delete {
+          width: 5rem !important;
+        }
+      }
+      td {
+        &:has(.delete-row) {
+          width: 5rem !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+<div
+  class="card"
+  (click)="navigateToProject(project.id)"
+  [style.background]="'url(' + project.mainImage + ')'"
+>
+  <div class="layer"></div>
+  <div class="details">
+    <p class="diff-font" [innerHTML]="project.name"></p>
+    <p [innerHTML]="project.nameEn"></p>
+  </div>
+</div>

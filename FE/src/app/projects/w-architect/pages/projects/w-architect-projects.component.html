@@ -1,0 +1,22 @@
+<div class="projects">
+  <div class="projects__header">
+    <app-w-architect-sections-header
+      [image]="image"
+      [title]="titles[id] || ''"
+      [subtitle]="subtitle"
+    ></app-w-architect-sections-header>
+  </div>
+
+  <div class="projects__content">
+    <div class="projects__content__title">
+      <h2 class="gold-title diff-font">مشاريعنا</h2>
+    </div>
+
+    <div class="projects__content__list">
+      <app-w-architect-project-card
+        *ngFor="let item of projects"
+        [project]="item"
+      ></app-w-architect-project-card>
+    </div>
+  </div>
+</div>

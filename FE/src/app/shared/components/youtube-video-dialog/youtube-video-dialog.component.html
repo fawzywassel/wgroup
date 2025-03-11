@@ -1,0 +1,23 @@
+<div class="youtube-video-dialog">
+  <p-dialog
+    [header]="title"
+    [draggable]="false"
+    [dismissableMask]="true"
+    [(visible)]="visible"
+    [modal]="true"
+    (onHide)="onHideDialogFn()"
+  >
+    <div class="content">
+      <ng-container *ngIf="url">
+        <iframe
+          [src]="safeURL"
+          [title]="title"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </ng-container>
+    </div>
+  </p-dialog>
+</div>

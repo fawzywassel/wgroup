@@ -1,0 +1,52 @@
+<div class="home">
+  <div class="home__header">
+    <div class="slider">
+      <p-galleria
+        [value]="images"
+        [circular]="true"
+        [showItemNavigators]="true"
+        [showThumbnails]="false"
+        [showIndicators]="true"
+        [showIndicatorsOnItem]="true"
+        [responsiveOptions]="responsiveOptions"
+      >
+        <ng-template pTemplate="item" let-item>
+          <div
+            class="container"
+            [style.background]="'url(' + item.itemImageSrc + ')'"
+          >
+            <div class="details">
+              <h2 [innerHTML]="item.label" class="diff-font"></h2>
+              <button (click)="navigateToProject(item.id)" class="button">
+                إذهب إلى المشروع
+              </button>
+            </div>
+            <div class="layer"></div>
+          </div>
+        </ng-template>
+      </p-galleria>
+    </div>
+  </div>
+  <div class="home__content">
+    <section class="about">
+      <app-w-architect-header></app-w-architect-header>
+    </section>
+    <section class="projects">
+      <h2 class="gold-title g-padding diff-font">مشاريعنا</h2>
+      <div class="projects-list">
+        <div
+          class="card"
+          *ngFor="let category of categories"
+          (click)="navigateToCategory(category.id)"
+          [style.background]="'url(' + category.image + ')'"
+        >
+          <div class="layer"></div>
+          <div class="details">
+            <p class="diff-font">{{ category.name }}</p>
+            <p>{{ category.nameEn }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

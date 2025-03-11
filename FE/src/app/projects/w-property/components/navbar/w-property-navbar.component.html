@@ -1,0 +1,32 @@
+<nav>
+  <div class="nav-container g-padding">
+    <div class="logo">
+      <img [src]="images.lightLogos.wProperty" />
+    </div>
+    <div class="links">
+      <ul>
+        <li (click)="routeToPage(routes.W_PROPERTY + '/' + routes.HOME)">
+          الرئيسية
+        </li>
+        <li (click)="routeToPage(routes.W_PROPERTY + '/' + routes.ABOUT_US)">
+          من نحن
+        </li>
+        <li (click)="routeToPage(routes.W_PROPERTY + '/' + routes.PROJECTS)">
+          مشاريعنا
+        </li>
+        <li (click)="routeToPage(routes.W_PROPERTY + '/' + routes.FEEDBACKS)">
+          تقييمات العملاء
+        </li>
+        <li (click)="routeToPage(routes.W_PROPERTY + '/' + routes.CONTACT_US)">
+          تواصل معنا
+        </li>
+      </ul>
+      <button
+        class="gold-btn"
+        (click)="routeToPage(routes.W_PROPERTY + '/' + routes.SUBMIT_REQUEST)"
+      >
+        ادرج وحدتك
+      </button>
+    </div>
+  </div>
+</nav>

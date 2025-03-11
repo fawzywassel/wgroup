@@ -1,0 +1,94 @@
+<div class="hiring">
+  <div class="hiring__header">
+    <app-w-group-sections-header
+      [image]="image"
+      [title]="title"
+      [subtitle]="subtitle"
+    ></app-w-group-sections-header>
+  </div>
+
+  <div class="hiring__content g-padding">
+    <div class="hiring__content__title">
+      <div class="right">
+        <h2>إنضم لفريق العمل المميز</h2>
+        <p>حقق شغفك وشاهد أعمالك واقع أمامك</p>
+      </div>
+      <div class="left">
+        <p>
+          نستقبل طلبات التوظيف
+          <span> # يوم 360 </span>
+          لا يوجد موعد محدد لتوظيف المبدعين
+        </p>
+      </div>
+    </div>
+    <div class="hiring__content__table">
+      <p-table [value]="jobs">
+        <ng-template pTemplate="header">
+          <tr>
+            <th>الوظيفة</th>
+            <th>Vacancy</th>
+            <th>الخبرة</th>
+            <th></th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-job>
+          <tr>
+            <td>{{ job.title }}</td>
+            <td>{{ job.titleEn }}</td>
+            <td>{{ job.experience }}</td>
+            <td class="actions">
+              <button (click)="showDetails(job)" class="button">
+                الشرح الوظيفي
+              </button>
+              <button (click)="applyForJob()" class="button">تقدم الأن</button>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+
+    <div class="hiring__content__details" *ngIf="selectedJob">
+      <h2 class="gold-title diff-font">{{ selectedJob.title }}</h2>
+      <p-tabView>
+        <p-tabPanel header="المهام">
+          <ul class="tasks">
+            <li *ngFor="let task of selectedJob.tasks">{{ task }}</li>
+          </ul>
+        </p-tabPanel>
+        <p-tabPanel header="المهارات">
+          <div class="skills">
+            <div class="right">
+              <h2>{{ selectedJob.skills.title }}</h2>
+              <h4>{{ selectedJob.skills.subtitle }}</h4>
+              <p>{{ selectedJob.skills.description }}</p>
+            </div>
+            <div class="left">
+              <div class="rate" *ngFor="let rate of selectedJob.skills.rates">
+                <label>{{ rate.label }}</label>
+                <p-progressBar [value]="rate.percentage" />
+              </div>
+            </div>
+          </div>
+        </p-tabPanel>
+        <p-tabPanel header="المتطلبات">
+          <div class="requirements">
+            <div class="right">
+              <h2>{{ selectedJob.requirements.title }}</h2>
+              <h4>{{ selectedJob.requirements.subtitle }}</h4>
+              <p>{{ selectedJob.requirements.description }}</p>
+            </div>
+            <div class="left">
+              <div
+                class="term"
+                *ngFor="let term of selectedJob.requirements.terms"
+              >
+                <div class="label">{{ term.label }}</div>
+                <div class="value">{{ term.value }}</div>
+              </div>
+            </div>
+          </div>
+        </p-tabPanel>
+      </p-tabView>
+    </div>
+  </div>
+</div>

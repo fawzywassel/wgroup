@@ -1,0 +1,42 @@
+<footer class="g-padding">
+  <div class="footer-container">
+    <div class="slogan">
+      <div class="slogan-cont">
+        <div class="logo">
+          <img [src]="data.logo" />
+        </div>
+        <div class="text">
+          <p class="diff-font" [innerHTML]="data.description"></p>
+        </div>
+        <div class="social-media">
+          <ul>
+            <li *ngFor="let item of data.socialMedia">
+              <a (click)="onClickSocialIcon(item.link)">
+                <i *ngIf="item.icon" [class]="item.icon"></i>
+                <img *ngIf="item.image" [src]="item.image" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="details">
+      <h2 class="diff-font diff-font">تواصل معنا</h2>
+      <ul>
+        <li *ngFor="let item of data.details">
+          <i [class]="item.icon"></i>
+          <p [ngClass]="{ 'diff-font': item.diffFont }">{{ item.text }}</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="whats-app" *ngIf="data.whatsApp">
+    <a (click)="onClickSocialIcon(data.whatsApp.link)">
+      <i *ngIf="data.whatsApp.icon" [class]="data.whatsApp.icon"></i>
+    </a>
+  </div>
+  <div class="copy-rights">
+    &copy; جميع الحقوق محفوظة لمجموعة
+    <img [src]="wImage" width="40px" style="margin-bottom: -10px" />
+  </div>
+</footer>

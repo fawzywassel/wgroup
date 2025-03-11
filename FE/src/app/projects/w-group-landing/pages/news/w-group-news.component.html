@@ -1,0 +1,22 @@
+<div class="news">
+  <div class="news__header">
+    <app-w-group-sections-header
+      [image]="image"
+      [title]="title"
+      [subtitle]="subtitle"
+    ></app-w-group-sections-header>
+  </div>
+
+  <div class="news__content g-padding">
+    <div class="news__content__title">
+      <h2 class="gold-title diff-font">المركز الإعلامي</h2>
+    </div>
+
+    <div class="news__content__list">
+      <app-w-group-news-card
+        *ngFor="let item of news"
+        [newsDetails]="item"
+      ></app-w-group-news-card>
+    </div>
+  </div>
+</div>

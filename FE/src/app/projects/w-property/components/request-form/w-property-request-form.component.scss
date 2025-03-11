@@ -1,0 +1,104 @@
+@import "../../../../../scss/all";
+
+:host {
+  ::ng-deep {
+    form {
+      width: 60%;
+      margin: 2rem auto;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      background-color: $white;
+      border: 1px solid $light-color-02;
+    }
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      .controls-row {
+        width: 100%;
+        display: flex;
+        align-items: start;
+        padding: 0.5rem 2rem;
+        gap: 2rem;
+        .control {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          width: 100%;
+          label {
+            span {
+              color: red;
+            }
+          }
+          .p-inputtextarea {
+            width: 100% !important;
+          }
+          .checkbox-item {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            gap: 0.5rem;
+            .p-checkbox-box {
+              &.p-highlight {
+                border-color: $primary-gold !important;
+                background: $primary-gold !important;
+                &:hover,
+                &:focus,
+                &:active {
+                  border-color: $primary-gold !important;
+                }
+              }
+              &:hover,
+              &:focus,
+              &:active {
+                border-color: $primary-gold !important;
+              }
+            }
+            .p-radiobutton-box {
+              &.p-highlight {
+                border-color: $primary-gold !important;
+                background: $primary-gold !important;
+                &:hover,
+                &:focus,
+                &:active {
+                  border-color: $primary-gold !important;
+                }
+              }
+              &:hover,
+              &:focus,
+              &:active {
+                border-color: $primary-gold !important;
+              }
+            }
+          }
+          input,
+          textarea {
+            &:hover,
+            &:focus,
+            &:active {
+              border-color: $primary-gold;
+            }
+          }
+        }
+      }
+      .controls-row-title {
+        background-color: $primary-gold;
+        color: $white;
+        padding: 1rem;
+        width: 100%;
+        font-weight: 500;
+      }
+      .submit-button {
+        display: flex;
+        justify-content: center;
+        padding: 3rem 0;
+        button {
+          &:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+          }
+        }
+      }
+    }
+  }
+}

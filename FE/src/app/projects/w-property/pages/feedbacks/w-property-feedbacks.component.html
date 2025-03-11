@@ -1,0 +1,22 @@
+<div class="feedbacks">
+  <div class="feedbacks__header">
+    <app-w-property-sections-header
+      [image]="image"
+      [title]="title"
+      [subtitle]="subtitle"
+    ></app-w-property-sections-header>
+  </div>
+
+  <div class="feedbacks__content g-padding">
+    <div class="feedbacks__content__title">
+      <h2 class="gold-title diff-font">تقيمات العملاء</h2>
+    </div>
+
+    <div class="feedbacks__content__list">
+      <app-w-property-feedback-card
+        *ngFor="let item of feedbacks"
+        [url]="item"
+      ></app-w-property-feedback-card>
+    </div>
+  </div>
+</div>

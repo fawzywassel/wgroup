@@ -1,0 +1,51 @@
+<div class="card">
+  <div
+    class="card-image"
+    [style.background]="'url(' + details.images[0]?.image + ')'"
+    (click)="showGallery()"
+  ></div>
+  <div class="content">
+    <p class="title">{{ details.title }}</p>
+    <div>
+      <label>كود الوحدة:</label>
+      <p>{{ details.code }}</p>
+    </div>
+    <div>
+      <label>تقييم العملاء:</label>
+      <p>{{ details.rate }}</p>
+    </div>
+    <div>
+      <label>الموقع:</label>
+      <p>{{ details.location }}</p>
+    </div>
+    <div>
+      <label>المساحة:</label>
+      <p>{{ details.space }} م <sup>2</sup></p>
+    </div>
+    <div>
+      <label>الخصوصية:</label>
+      <p>{{ details.privacy }}</p>
+    </div>
+    <a [href]="details.url" target="_blank">للحجز اضغط هنا</a>
+  </div>
+
+  <p-galleria
+    [value]="details.images"
+    [(visible)]="isVisible"
+    [responsiveOptions]="responsiveOptions"
+    [containerStyle]="{ 'max-width': '50%' }"
+    [numVisible]="9"
+    [circular]="true"
+    [fullScreen]="true"
+    [showItemNavigators]="true"
+  >
+    <ng-template pTemplate="item" let-item>
+      <img [src]="item.image" class="original" />
+    </ng-template>
+    <ng-template pTemplate="thumbnail" let-item>
+      <div class="grid grid-nogutter justify-content-center">
+        <img [src]="item.thumb" class="thumbnail" />
+      </div>
+    </ng-template>
+  </p-galleria>
+</div>

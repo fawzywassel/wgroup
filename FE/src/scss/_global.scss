@@ -1,0 +1,154 @@
+@import './_fonts.scss';
+@import './variables';
+@import './mixins';
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+div,
+span,
+label,
+button,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Cairo', sans-serif !important;
+}
+
+*,
+*:hover,
+*:focus,
+*:active {
+  outline: none !important;
+  box-shadow: none !important;
+  @include scrollSecondary();
+}
+
+button.button {
+  background: none;
+  box-shadow: none;
+  border: none;
+}
+
+.g-padding {
+  padding-right: 7rem !important;
+  padding-left: 7rem !important;
+}
+
+h2.gold-title {
+  color: $primary-gold;
+  font-weight: bold;
+  font-size: 3rem;
+  margin-bottom: 3rem !important;
+}
+
+button.gold-btn {
+  background-color: $primary-gold;
+  width: max-content;
+  margin: auto;
+  padding: 0.75rem 1.25rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  color: $white;
+}
+
+.diff-bg {
+  background-color: $light-color-03;
+}
+
+.card-white {
+  background-color: $white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: $shadow-01 !important;
+}
+
+.add-black-layer,
+.add-light-layer {
+  position: relative;
+  &::after {
+    content: '';
+    display: block;
+    height: 100% !important;
+    width: 100% !important;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+.add-black-layer {
+  &::after {
+    background-color: rgba($color: #000000, $alpha: 0.5);
+  }
+}
+
+.add-light-layer {
+  &::after {
+    background-color: rgba($color: #000000, $alpha: 0.2);
+  }
+}
+
+.loader {
+  margin: 20% auto;
+  border: 0.5rem solid $light-color-02;
+  border-radius: 50%;
+  border-top: 0.5rem solid $primary-gold;
+  width: 5rem;
+  height: 5rem;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.diff-font {
+  font-family: 'Abdo-Salem' !important;
+  color: $primary-gold !important;
+  span {
+    font-family: 'Cairo', sans-serif !important;
+  }
+}
+
+strong {
+  font-size: 1.5rem !important;
+}

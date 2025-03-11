@@ -1,0 +1,111 @@
+@import '../../../../../scss/all';
+
+.home {
+  &__content {
+    section {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+
+    section.video-about {
+      h3 {
+        color: $primary-gold;
+        font-size: 2.5rem;
+        margin-bottom: 2.5rem !important;
+      }
+
+      div.section-container {
+        display: flex;
+        gap: 4rem;
+        div.about-us {
+          h3 {
+            margin-top: -1.25rem !important;
+          }
+          p {
+            font-size: 1.35rem;
+            color: $w-group-text;
+            &:first-of-type {
+              margin-bottom: 2rem !important;
+            }
+          }
+        }
+      }
+    }
+
+    section.feedback {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      .feedback-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+      }
+    }
+
+    section.projects {
+      .projects-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+      }
+      .gold-btn {
+        display: flex;
+        margin: 3rem auto 0 !important;
+      }
+    }
+
+    section.partners {
+      display: flex;
+      gap: 4rem;
+      align-items: start;
+      .logos {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        img {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+        }
+      }
+      .text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        .title {
+          font-size: 2rem;
+          color: $primary-gold;
+        }
+        .description {
+          font-size: 1.25rem;
+          text-align: center;
+          width: 80%;
+        }
+        .items {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          gap: 3rem;
+          margin-top: 1.5rem;
+          .item {
+            text-align: center;
+            i {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin: 1rem 0 2rem;
+              color: $primary-gold;
+              text-shadow: 1px 1px 3px $light-color-01;
+              font-size: 3rem;
+            }
+            h2 {
+              margin-bottom: 0.5rem !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

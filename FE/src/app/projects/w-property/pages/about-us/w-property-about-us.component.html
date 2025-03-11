@@ -1,0 +1,43 @@
+<div class="about-us">
+  <div class="about-us__header">
+    <app-w-property-sections-header
+      [image]="image"
+      [title]="title"
+      [subtitle]="subtitle"
+    ></app-w-property-sections-header>
+  </div>
+  <div class="about-us__content">
+    <section class="about">
+      <div class="text">
+        <h2 class="diff-font">من نحن</h2>
+        <p>
+          W لإدارة الأملاك هي شركة ريادية ناشئة في مجال التقنية العقارية متخصصة
+          في الإيجارات قصيرة الأجل. الشركة تقدم خدمات إدارية وتسويقية للعقارات،
+          وتمكنت من إدارة عقارات بنجاح منذ عام 2022. في المملكة العربية
+          السعودية، نهدف إلى الاستفادة من نمو قطاع السياحة المتزايد والبيئة
+          الاستثمارية . الجذابة تقوم أدواتنا التكنولوجية المتقدمة بضمان تحقيق
+          معدلات إشغال مثالية وعوائد مربحة لأصحاب العقارات. نحن ندعوك للانضمام
+          إلينا لتقديم تجارب استثنائية للضيوف مع إدارة عقارات مميزة في السوق
+          السعودي
+        </p>
+      </div>
+      <div class="image" [style.background]="'url(' + aboutImage + ')'"></div>
+    </section>
+
+    <section class="percentage g-padding">
+      <h2 class="title">{{ percentage.title }}</h2>
+      <ul>
+        <li
+          class="description card-white"
+          *ngFor="let item of percentage.descriptions"
+        >
+          <i [class]="'pi pi-verified'"></i>
+          <p>{{ item }}</p>
+        </li>
+      </ul>
+      <button class="button gold-btn" (click)="goToRequest()">
+        ادرج وحدتك الآن
+      </button>
+    </section>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<header>
+  <div class="slider">
+    <p-galleria
+      [value]="images"
+      [circular]="true"
+      [showItemNavigators]="true"
+      [showThumbnails]="false"
+      [showIndicators]="true"
+      [showIndicatorsOnItem]="true"
+      [responsiveOptions]="responsiveOptions"
+    >
+      <ng-template pTemplate="item" let-item>
+        <div
+          class="container"
+          [style.background]="'url(' + item.itemImageSrc + ')'"
+        >
+          <div class="layer">
+            <p class="diff-font" *ngIf="item.text">{{ item.text }}</p>
+          </div>
+        </div>
+      </ng-template>
+    </p-galleria>
+  </div>
+</header>

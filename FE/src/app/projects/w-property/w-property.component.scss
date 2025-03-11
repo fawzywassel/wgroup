@@ -1,0 +1,37 @@
+@import '../../../scss/all';
+
+:host {
+  ::ng-deep {
+    .footer {
+      footer {
+        background-color: $w-property-dark !important;
+        .details {
+          color: #f8d589 !important;
+          h2 {
+            color: #f8d589 !important;
+          }
+          ul li i,
+          ul li p {
+            color: #f8d589 !important;
+          }
+        }
+
+        .slogan {
+          .text {
+            p {
+              color: #f8d589 !important;
+            }
+          }
+          .social-media ul li a {
+            background-color: #f8d589 !important;
+            color: $w-property-dark !important;
+          }
+        }
+        .copy-rights {
+          border-top-color: #f8d589;
+          color: #f8d589;
+        }
+      }
+    }
+  }
+}

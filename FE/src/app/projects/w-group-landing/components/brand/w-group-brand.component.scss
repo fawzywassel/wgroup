@@ -1,0 +1,62 @@
+@import '../../../../../scss/all';
+
+:host {
+  ::ng-deep {
+    .brand {
+      cursor: pointer;
+      height: 15rem;
+      &__container {
+        width: 100%;
+        height: 100%;
+        background-position: 50% !important;
+        background-size: cover !important;
+        &__layer {
+          // background: rgba($color: $black, $alpha: 0.85);
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          &.dark-layer {
+            background: rgba($color: $black, $alpha: 0.85);
+          }
+          &.space-between {
+            justify-content: space-between;
+          }
+          img {
+            height: 100%;
+            transition: transform 1s;
+          }
+        }
+      }
+      &.disabled {
+        pointer-events: none;
+        // opacity: 0.5;
+        .label {
+          font-size: 2rem;
+          text-transform: uppercase;
+          margin-inline-start: 40%;
+          span {
+            letter-spacing: 12px;
+          }
+        }
+        img {
+          opacity: 0.5;
+        }
+      }
+
+      &:not(.disabled):hover {
+        img {
+          transform: translateX(-100px);
+          transition: transform 3s;
+        }
+      }
+      &:has(.align-end) {
+        &:hover {
+          img {
+            transform: translateX(100px);
+          }
+        }
+      }
+    }
+  }
+}

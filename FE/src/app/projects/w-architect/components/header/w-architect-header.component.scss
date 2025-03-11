@@ -1,0 +1,40 @@
+@import '../../../../../scss/all';
+
+:host {
+  ::ng-deep {
+    header {
+      display: grid;
+      grid-template-columns: 1fr;
+      overflow: hidden;
+      .right {
+        img {
+          height: 85vh;
+        }
+      }
+      .left {
+        position: relative;
+        text-align: center;
+        padding-top: 4rem !important;
+        // padding-bottom: 4rem !important;
+        .text {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          h2 {
+            font-size: 3rem;
+            color: $primary-gold;
+          }
+          h3 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem !important;
+          }
+          p {
+            font-size: 1.5rem;
+            width: 75%;
+          }
+        }
+      }
+    }
+  }
+}

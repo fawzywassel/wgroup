@@ -1,0 +1,400 @@
+<form [formGroup]="form">
+  <div class="form-container">
+    <div class="controls-row-title">معلومات عن صاحب الطلب</div>
+
+    <div class="controls-row">
+      <div class="control">
+        <label [htmlFor]="controls.firstName"
+          >{{ labels[controls.firstName] }}<span> *</span></label
+        >
+        <input
+          type="text"
+          pInputText
+          [id]="controls.firstName"
+          [formControlName]="controls.firstName"
+        />
+      </div>
+      <div class="control">
+        <label [htmlFor]="controls.lastName"
+          >{{ labels[controls.lastName] }}<span> *</span></label
+        >
+        <input
+          type="text"
+          pInputText
+          [id]="controls.lastName"
+          [formControlName]="controls.lastName"
+        />
+      </div>
+    </div>
+
+    <div class="controls-row">
+      <div class="control">
+        <label [htmlFor]="controls.email"
+          >{{ labels[controls.email] }}<span> *</span></label
+        >
+        <input
+          type="text"
+          pInputText
+          [id]="controls.email"
+          [formControlName]="controls.email"
+        />
+      </div>
+      <div class="control">
+        <label [htmlFor]="controls.phoneNumber"
+          >{{ labels[controls.phoneNumber] }}<span> *</span></label
+        >
+        <input
+          type="text"
+          pInputText
+          [id]="controls.phoneNumber"
+          [formControlName]="controls.phoneNumber"
+        />
+      </div>
+    </div>
+
+    <div class="controls-row">
+      <div class="control">
+        <label [htmlFor]="controls.userCountry"
+          >{{ labels[controls.userCountry] }}<span> *</span></label
+        >
+        <input
+          type="text"
+          pInputText
+          [id]="controls.userCountry"
+          [formControlName]="controls.userCountry"
+        />
+      </div>
+      <div class="control">
+        <label [htmlFor]="controls.userCity"
+          >{{ labels[controls.userCity] }}<span> *</span></label
+        >
+        <input
+          type="text"
+          pInputText
+          [id]="controls.userCity"
+          [formControlName]="controls.userCity"
+        />
+      </div>
+    </div>
+
+    <div class="controls-row">
+      <div class="control">
+        <label [htmlFor]="controls.userInfo"
+          >{{ labels[controls.userInfo] }}<span> *</span></label
+        >
+        <textarea
+          rows="5"
+          pInputTextarea
+          [id]="controls.userInfo"
+          [formControlName]="controls.userInfo"
+          [autoResize]="true"
+        >
+        </textarea>
+      </div>
+    </div>
+
+    <div class="controls-row-title">معلومات عن الوحدة</div>
+
+    <div class="controls-row">
+      <div class="control">
+        <label [htmlFor]="controls.userUnits"
+          >{{ labels[controls.userUnits] }}<span> *</span></label
+        >
+        <div class="checkbox-item">
+          <p-checkbox
+            [formControlName]="controls.userUnits"
+            [value]="'FULL_BUILDING'"
+            [name]="controls.userUnits"
+            (onChange)="onChangeCheckbox('FULL_BUILDING')"
+          />
+          <label>{{ unitType?.FULL_BUILDING }}</label>
+        </div>
+        <div class="checkbox-item">
+          <p-checkbox
+            [formControlName]="controls.userUnits"
+            [value]="'ONE_UNIT_BUILDING'"
+            [name]="controls.userUnits"
+            (onChange)="onChangeCheckbox('ONE_UNIT_BUILDING')"
+          />
+          <label>{{ unitType?.ONE_UNIT_BUILDING }}</label>
+        </div>
+        <div class="checkbox-item">
+          <p-checkbox
+            [formControlName]="controls.userUnits"
+            [value]="'MULTI_UNITS_BUILDING'"
+            [name]="controls.userUnits"
+            (onChange)="onChangeCheckbox('MULTI_UNITS_BUILDING')"
+          />
+          <label>{{ unitType?.MULTI_UNITS_BUILDING }}</label>
+        </div>
+        <div class="checkbox-item">
+          <p-checkbox
+            [formControlName]="controls.userUnits"
+            [value]="'MULTI_UNITS_SEPARATED'"
+            [name]="controls.userUnits"
+            (onChange)="onChangeCheckbox('MULTI_UNITS_SEPARATED')"
+          />
+          <label>{{ unitType?.MULTI_UNITS_SEPARATED }}</label>
+        </div>
+        <div class="checkbox-item">
+          <p-checkbox
+            [formControlName]="controls.userUnits"
+            [value]="'AGRICULTURAL_LAND'"
+            [name]="controls.userUnits"
+            checked
+            (onChange)="onChangeCheckbox('AGRICULTURAL_LAND')"
+          />
+          <label>{{ unitType?.AGRICULTURAL_LAND }}</label>
+        </div>
+        <div class="checkbox-item">
+          <p-checkbox
+            [formControlName]="controls.userUnits"
+            [value]="'FARM'"
+            [name]="controls.userUnits"
+            checked
+            (onChange)="onChangeCheckbox('FARM')"
+          />
+          <label>{{ unitType?.FARM }}</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls-row">
+      <div class="control">
+        <label [htmlFor]="controls.unitStatus"
+          >{{ labels[controls.unitStatus] }}<span> *</span></label
+        >
+        <div class="checkbox-item">
+          <div class="checkbox-item">
+            <p-radioButton
+              [inputId]="controls.unitStatus"
+              [value]="'NO'"
+              [formControlName]="controls.unitStatus"
+            />
+            <label [for]="controls.unitStatus"> {{ unitStatus.NO }} </label>
+          </div>
+        </div>
+        <div class="checkbox-item">
+          <p-radioButton
+            [inputId]="controls.unitStatus"
+            [value]="'YES'"
+            [formControlName]="controls.unitStatus"
+          />
+          <label [for]="controls.unitStatus"> {{ unitStatus.YES }} </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls-row">
+      <div class="control">
+        <label [htmlFor]="controls.rentType"
+          >{{ labels[controls.rentType] }}<span> *</span></label
+        >
+        <div class="checkbox-item">
+          <div class="checkbox-item">
+            <p-radioButton
+              [inputId]="controls.rentType"
+              [value]="'DAILY'"
+              [formControlName]="controls.rentType"
+            />
+            <label [for]="controls.rentType"> {{ rentTypes.DAILY }} </label>
+          </div>
+        </div>
+        <div class="checkbox-item">
+          <p-radioButton
+            [inputId]="controls.rentType"
+            [value]="'WEEKLY'"
+            [formControlName]="controls.rentType"
+          />
+          <label [for]="controls.rentType"> {{ rentTypes.WEEKLY }} </label>
+        </div>
+        <div class="checkbox-item">
+          <p-radioButton
+            [inputId]="controls.rentType"
+            [value]="'MONTHLY'"
+            [formControlName]="controls.rentType"
+          />
+          <label [for]="controls.rentType"> {{ rentTypes.MONTHLY }} </label>
+        </div>
+        <div class="checkbox-item">
+          <p-radioButton
+            [inputId]="controls.rentType"
+            [value]="'ANNUALLY'"
+            [formControlName]="controls.rentType"
+          />
+          <label [for]="controls.rentType"> {{ rentTypes.ANNUALLY }} </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls-row">
+      <div class="control">
+        <label [htmlFor]="controls.unitCountry"
+          >{{ labels[controls.unitCountry] }}<span> *</span></label
+        >
+        <input
+          type="text"
+          pInputText
+          [id]="controls.unitCountry"
+          [formControlName]="controls.unitCountry"
+        />
+      </div>
+      <div class="control">
+        <label [htmlFor]="controls.unitCity"
+          >{{ labels[controls.unitCity] }}<span> *</span></label
+        >
+        <input
+          type="text"
+          pInputText
+          [id]="controls.unitCity"
+          [formControlName]="controls.unitCity"
+        />
+      </div>
+      <div class="control">
+        <label [htmlFor]="controls.unitDistrict"
+          >{{ labels[controls.unitDistrict] }}<span> *</span></label
+        >
+        <input
+          type="text"
+          pInputText
+          [id]="controls.unitDistrict"
+          [formControlName]="controls.unitDistrict"
+        />
+      </div>
+    </div>
+
+    <div class="controls-row">
+      <div class="control">
+        <label [htmlFor]="controls.unitInfo"
+          >{{ labels[controls.unitInfo] }}<span> *</span></label
+        >
+        <textarea
+          rows="5"
+          pInputTextarea
+          [id]="controls.unitInfo"
+          [formControlName]="controls.unitInfo"
+          [autoResize]="true"
+        >
+        </textarea>
+      </div>
+    </div>
+
+    <div class="controls-row">
+      <div class="control">
+        <label [htmlFor]="controls.userRelation"
+          >{{ labels[controls.userRelation] }}<span> *</span></label
+        >
+        <div class="checkbox-item">
+          <div class="checkbox-item">
+            <p-radioButton
+              [inputId]="controls.userRelation"
+              [value]="'OWNER'"
+              [formControlName]="controls.userRelation"
+            />
+            <label [for]="controls.userRelation">
+              {{ userRelation.OWNER }}
+            </label>
+          </div>
+        </div>
+        <div class="checkbox-item">
+          <p-radioButton
+            [inputId]="controls.userRelation"
+            [value]="'AGENT'"
+            [formControlName]="controls.userRelation"
+          />
+          <label [for]="controls.userRelation">
+            {{ userRelation.AGENT }}
+          </label>
+        </div>
+        <div class="checkbox-item">
+          <p-radioButton
+            [inputId]="controls.userRelation"
+            [value]="'TENTATIVE'"
+            [formControlName]="controls.userRelation"
+          />
+          <label [for]="controls.userRelation">
+            {{ userRelation.TENTATIVE }}
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls-row">
+      <div class="control">
+        <label [htmlFor]="controls.isInvestBefore"
+          >{{ labels[controls.isInvestBefore] }}<span> *</span></label
+        >
+        <div class="checkbox-item">
+          <div class="checkbox-item">
+            <p-radioButton
+              [inputId]="controls.isInvestBefore"
+              [value]="'YES'"
+              [formControlName]="controls.isInvestBefore"
+            />
+            <label [for]="controls.isInvestBefore"> {{ yesNo.YES }} </label>
+          </div>
+        </div>
+        <div class="checkbox-item">
+          <p-radioButton
+            [inputId]="controls.isInvestBefore"
+            [value]="'NO'"
+            [formControlName]="controls.isInvestBefore"
+          />
+          <label [for]="controls.isInvestBefore"> {{ yesNo.NO }} </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls-row">
+      <div class="control">
+        <label [htmlFor]="controls.callAgreement"
+          >{{ labels[controls.callAgreement] }}<span> *</span></label
+        >
+        <div class="checkbox-item">
+          <div class="checkbox-item">
+            <p-radioButton
+              [inputId]="controls.callAgreement"
+              [value]="'YES'"
+              [formControlName]="controls.callAgreement"
+            />
+            <label [for]="controls.callAgreement"> {{ yesNo.YES }} </label>
+          </div>
+        </div>
+        <div class="checkbox-item">
+          <p-radioButton
+            [inputId]="controls.callAgreement"
+            [value]="'NO'"
+            [formControlName]="controls.callAgreement"
+          />
+          <label [for]="controls.callAgreement"> {{ yesNo.NO }} </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls-row">
+      <div class="control">
+        <label [htmlFor]="controls.promoCode">{{
+          labels[controls.promoCode]
+        }}</label>
+        <input
+          type="text"
+          pInputText
+          [id]="controls.promoCode"
+          [formControlName]="controls.promoCode"
+        />
+      </div>
+    </div>
+
+    <div class="submit-button">
+      <button
+        class="button gold-btn"
+        [disabled]="disableSubmit"
+        (click)="submitRequest()"
+      >
+        ادرج وحدتك
+      </button>
+    </div>
+  </div>
+</form>
+
+<p-toast position="top-right" />

@@ -1,0 +1,31 @@
+<nav>
+  <div class="nav-container g-padding">
+    <div class="logo" (click)="routeToPage(routes.W_ARCHITECT)">
+      <img [src]="images.lightLogos.wArchitect" />
+    </div>
+    <div class="menu-icon">
+      <span (click)="openSidebar()">
+        <i [class]="'pi pi-bars'"></i>
+      </span>
+    </div>
+  </div>
+
+  <p-sidebar
+    [(visible)]="sidebarVisible"
+    [fullScreen]="true"
+    [blockScroll]="true"
+    position="top"
+  >
+    <div class="links">
+      <ul>
+        <li (click)="routeToPage(routes.W_ARCHITECT + '/' + routes.HOME)">
+          الرئيسية
+        </li>
+
+        <li (click)="routeToPage(routes.W_ARCHITECT + '/' + routes.CONTACT_US)">
+          تواصل معنا
+        </li>
+      </ul>
+    </div>
+  </p-sidebar>
+</nav>

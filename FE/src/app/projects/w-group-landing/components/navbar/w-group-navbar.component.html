@@ -1,0 +1,16 @@
+<nav>
+    <div class="nav-container g-padding">
+        <div class="logo">
+            <img [src]="images.lightLogos.wGroup" />
+        </div>
+        <div class="links">
+            <ul>
+                <li (click)="routeToPage(routes.HOME)"> الرئيسية </li>
+                <li (click)="routeToPage(routes.NEWS)"> المركز الاعلامي </li>
+                <li (click)="routeToPage(routes.HIRING)"> التوظيف</li>
+                <li (click)="routeToPage(routes.ABOUT_US)"> من نحن </li>
+                <li (click)="routeToPage(routes.CONTACT_US)"> تواصل معنا </li>
+            </ul>
+        </div>
+    </div>
+</nav>

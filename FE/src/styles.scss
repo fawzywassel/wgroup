@@ -1,0 +1,16 @@
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+@import "./scss/global";
+
+html,
+body {
+  height: 100%;
+  font-family: "Cairo", sans-serif !important;
+}
+
+body {
+  margin: 0;
+  background-color: #f9f9f9 !important;
+  font-family: "Cairo", sans-serif !important;
+  direction: rtl;
+}
