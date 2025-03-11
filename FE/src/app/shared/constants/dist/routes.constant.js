@@ -1,0 +1,20 @@
+"use strict";
+exports.__esModule = true;
+exports.W_ROUTES = void 0;
+exports.W_ROUTES = {
+    W_GROUP: '',
+    W_PROPERTY: 'w-property',
+    W_ARCHITECT: 'w-architect',
+    W_REAL_ESTATE: 'w-real-estate',
+    DASHBOARD: 'sf284cc9-ud1e-u896-i44f-7dacd553bf5f',
+    LOGIN: 'login',
+    HOME: 'home',
+    NEWS: 'news',
+    HIRING: 'hiring',
+    CONTACT_US: 'contact-us',
+    ABOUT_US: 'about-us',
+    FEEDBACKS: 'feedbacks',
+    PROJECTS: 'projects',
+    SUBMIT_REQUEST: 'submit-request',
+    DETAILS: 'details'
+};

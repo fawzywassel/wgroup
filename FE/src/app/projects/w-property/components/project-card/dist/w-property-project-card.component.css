@@ -1,0 +1,341 @@
+@font-face {
+  font-family: "Cairo";
+  src: url("../assets/fonts/Cairo/Cairo-ExtraLight.ttf");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Cairo";
+  src: url("../assets/fonts/Cairo/Cairo-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Cairo";
+  src: url("../assets/fonts/Cairo/Cairo-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Cairo";
+  src: url("../assets/fonts/Cairo/Cairo-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Cairo";
+  src: url("../assets/fonts/Cairo/Cairo-SemiBold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Cairo";
+  src: url("../assets/fonts/Cairo/Cairo-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Cairo";
+  src: url("../assets/fonts/Cairo/Cairo-ExtraBold.ttf");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Cairo";
+  src: url("../assets/fonts/Cairo/Cairo-Black.ttf");
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Abdo-Salem";
+  src: url("../assets/fonts/Abdo Salem/Abdo-salem-Bold.ttf");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Cairo";
+  src: url("../assets/fonts/Cairo/Cairo-ExtraLight.ttf");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Cairo";
+  src: url("../assets/fonts/Cairo/Cairo-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Cairo";
+  src: url("../assets/fonts/Cairo/Cairo-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Cairo";
+  src: url("../assets/fonts/Cairo/Cairo-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Cairo";
+  src: url("../assets/fonts/Cairo/Cairo-SemiBold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Cairo";
+  src: url("../assets/fonts/Cairo/Cairo-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Cairo";
+  src: url("../assets/fonts/Cairo/Cairo-ExtraBold.ttf");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Cairo";
+  src: url("../assets/fonts/Cairo/Cairo-Black.ttf");
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Abdo-Salem";
+  src: url("../assets/fonts/Abdo Salem/Abdo-salem-Bold.ttf");
+  font-weight: 200;
+}
+/* ------------ primary colors ------------ */
+/* ------------ light colors ------------ */
+/* ------------ light colors ------------ */
+/* ------------ shadow colors ------------ */
+/* ------------ solid colors ------------ */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+div,
+span,
+label,
+button,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cairo", sans-serif !important;
+}
+
+*,
+*:hover,
+*:focus,
+*:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+*::-webkit-scrollbar,
+*:hover::-webkit-scrollbar,
+*:focus::-webkit-scrollbar,
+*:active::-webkit-scrollbar {
+  width: 0.5rem;
+}
+*::-webkit-scrollbar-track,
+*:hover::-webkit-scrollbar-track,
+*:focus::-webkit-scrollbar-track,
+*:active::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb,
+*:hover::-webkit-scrollbar-thumb,
+*:focus::-webkit-scrollbar-thumb,
+*:active::-webkit-scrollbar-thumb {
+  background: #ccc;
+  background-clip: padding-box;
+  border-radius: 8px;
+}
+*::-webkit-scrollbar-thumb:hover,
+*:hover::-webkit-scrollbar-thumb:hover,
+*:focus::-webkit-scrollbar-thumb:hover,
+*:active::-webkit-scrollbar-thumb:hover {
+  background: #ccc;
+}
+
+button.button {
+  background: none;
+  box-shadow: none;
+  border: none;
+}
+
+.g-padding {
+  padding-right: 7rem !important;
+  padding-left: 7rem !important;
+}
+
+h2.gold-title {
+  color: #c69a79;
+  font-weight: bold;
+  font-size: 3rem;
+  margin-bottom: 3rem !important;
+}
+
+button.gold-btn {
+  background-color: #c69a79;
+  width: max-content;
+  margin: auto;
+  padding: 0.75rem 1.25rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.diff-bg {
+  background-color: #f5f5f5;
+}
+
+.card-white {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 1px #ddd !important;
+}
+
+.add-black-layer,
+.add-light-layer {
+  position: relative;
+}
+.add-black-layer::after,
+.add-light-layer::after {
+  content: "";
+  display: block;
+  height: 100% !important;
+  width: 100% !important;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.add-black-layer::after {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.add-light-layer::after {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.loader {
+  margin: 20% auto;
+  border: 0.5rem solid #ddd;
+  border-radius: 50%;
+  border-top: 0.5rem solid #c69a79;
+  width: 5rem;
+  height: 5rem;
+  -webkit-animation: spin 2s linear infinite;
+  /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.diff-font {
+  font-family: "Abdo-Salem" !important;
+  color: #c69a79 !important;
+}
+.diff-font span {
+  font-family: "Cairo", sans-serif !important;
+}
+
+strong {
+  font-size: 1.5rem !important;
+}
+
+/* ------------ primary colors ------------ */
+/* ------------ light colors ------------ */
+/* ------------ light colors ------------ */
+/* ------------ shadow colors ------------ */
+/* ------------ solid colors ------------ */
+:host {
+  display: flex;
+}
+:host ::ng-deep .card {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  direction: rtl;
+  width: 100%;
+  overflow: hidden;
+}
+:host ::ng-deep .card .title {
+  margin: 1rem 2rem !important;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  height: 1.75rem;
+  overflow: hidden;
+  font-size: 1rem;
+  font-weight: bold;
+}
+:host ::ng-deep .card .content > div {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 0.75rem;
+  padding-inline-start: 2rem;
+}
+:host ::ng-deep .card .content > div p {
+  font-size: 1rem;
+  font-weight: bold;
+  color: w-group-text;
+}
+:host ::ng-deep .card .content > div label {
+  color: w-group-title;
+}
+:host ::ng-deep .card .content a {
+  text-align: center;
+  padding: 0.5rem 1rem;
+  background-color: #c69a79;
+  color: #ffffff;
+  display: block;
+  margin: 2rem auto 0;
+}
+:host ::ng-deep .card .p-galleria {
+  direction: ltr !important;
+}
+:host ::ng-deep .card .card-image {
+  width: 100%;
+  height: 20rem !important;
+  background-size: cover !important;
+  background-position: 50% 50% !important;
+  cursor: pointer;
+}
+:host ::ng-deep .card img.original {
+  display: flex;
+  width: auto;
+  max-width: 100%;
+  max-height: 80vh;
+}
+:host ::ng-deep .card .p-galleria-thumbnail-items {
+  gap: 1rem;
+}
+:host ::ng-deep .card .p-galleria-thumbnail-items img.thumbnail {
+  display: flex;
+  width: 100%;
+}

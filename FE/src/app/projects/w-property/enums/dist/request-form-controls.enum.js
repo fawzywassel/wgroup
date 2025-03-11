@@ -1,0 +1,25 @@
+"use strict";
+exports.__esModule = true;
+exports.ERequestFormControls = void 0;
+var ERequestFormControls;
+(function (ERequestFormControls) {
+    ERequestFormControls["firstName"] = "firstName";
+    ERequestFormControls["lastName"] = "lastName";
+    ERequestFormControls["phoneNumber"] = "phoneNumber";
+    ERequestFormControls["email"] = "email";
+    ERequestFormControls["userCountry"] = "userCountry";
+    ERequestFormControls["userCity"] = "userCity";
+    ERequestFormControls["userInfo"] = "userInfo";
+    ERequestFormControls["userUnits"] = "userUnits";
+    ERequestFormControls["unitStatus"] = "unitStatus";
+    ERequestFormControls["rentType"] = "rentType";
+    ERequestFormControls["unitCountry"] = "unitCountry";
+    ERequestFormControls["unitCity"] = "unitCity";
+    ERequestFormControls["unitDistrict"] = "unitDistrict";
+    ERequestFormControls["unitInfo"] = "unitInfo";
+    ERequestFormControls["userRelation"] = "userRelation";
+    ERequestFormControls["isInvestBefore"] = "isInvestBefore";
+    ERequestFormControls["callAgreement"] = "callAgreement";
+    ERequestFormControls["promoCode"] = "promoCode";
+    ERequestFormControls["extraInfo"] = "extraInfo";
+})(ERequestFormControls = exports.ERequestFormControls || (exports.ERequestFormControls = {}));

@@ -1,0 +1,498 @@
+@font-face {
+  font-family: "Cairo";
+  src: url("../assets/fonts/Cairo/Cairo-ExtraLight.ttf");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Cairo";
+  src: url("../assets/fonts/Cairo/Cairo-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Cairo";
+  src: url("../assets/fonts/Cairo/Cairo-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Cairo";
+  src: url("../assets/fonts/Cairo/Cairo-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Cairo";
+  src: url("../assets/fonts/Cairo/Cairo-SemiBold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Cairo";
+  src: url("../assets/fonts/Cairo/Cairo-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Cairo";
+  src: url("../assets/fonts/Cairo/Cairo-ExtraBold.ttf");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Cairo";
+  src: url("../assets/fonts/Cairo/Cairo-Black.ttf");
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Abdo-Salem";
+  src: url("../assets/fonts/Abdo Salem/Abdo-salem-Bold.ttf");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Cairo";
+  src: url("../assets/fonts/Cairo/Cairo-ExtraLight.ttf");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Cairo";
+  src: url("../assets/fonts/Cairo/Cairo-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Cairo";
+  src: url("../assets/fonts/Cairo/Cairo-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Cairo";
+  src: url("../assets/fonts/Cairo/Cairo-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Cairo";
+  src: url("../assets/fonts/Cairo/Cairo-SemiBold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Cairo";
+  src: url("../assets/fonts/Cairo/Cairo-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Cairo";
+  src: url("../assets/fonts/Cairo/Cairo-ExtraBold.ttf");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Cairo";
+  src: url("../assets/fonts/Cairo/Cairo-Black.ttf");
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Abdo-Salem";
+  src: url("../assets/fonts/Abdo Salem/Abdo-salem-Bold.ttf");
+  font-weight: 200;
+}
+/* ------------ primary colors ------------ */
+/* ------------ light colors ------------ */
+/* ------------ light colors ------------ */
+/* ------------ shadow colors ------------ */
+/* ------------ solid colors ------------ */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+div,
+span,
+label,
+button,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cairo", sans-serif !important;
+}
+
+*,
+*:hover,
+*:focus,
+*:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+*::-webkit-scrollbar,
+*:hover::-webkit-scrollbar,
+*:focus::-webkit-scrollbar,
+*:active::-webkit-scrollbar {
+  width: 0.5rem;
+}
+*::-webkit-scrollbar-track,
+*:hover::-webkit-scrollbar-track,
+*:focus::-webkit-scrollbar-track,
+*:active::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb,
+*:hover::-webkit-scrollbar-thumb,
+*:focus::-webkit-scrollbar-thumb,
+*:active::-webkit-scrollbar-thumb {
+  background: #ccc;
+  background-clip: padding-box;
+  border-radius: 8px;
+}
+*::-webkit-scrollbar-thumb:hover,
+*:hover::-webkit-scrollbar-thumb:hover,
+*:focus::-webkit-scrollbar-thumb:hover,
+*:active::-webkit-scrollbar-thumb:hover {
+  background: #ccc;
+}
+
+button.button {
+  background: none;
+  box-shadow: none;
+  border: none;
+}
+
+.g-padding {
+  padding-right: 7rem !important;
+  padding-left: 7rem !important;
+}
+
+h2.gold-title {
+  color: #c69a79;
+  font-weight: bold;
+  font-size: 3rem;
+  margin-bottom: 3rem !important;
+}
+
+button.gold-btn {
+  background-color: #c69a79;
+  width: max-content;
+  margin: auto;
+  padding: 0.75rem 1.25rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.diff-bg {
+  background-color: #f5f5f5;
+}
+
+.card-white {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 1px #ddd !important;
+}
+
+.add-black-layer,
+.add-light-layer {
+  position: relative;
+}
+.add-black-layer::after,
+.add-light-layer::after {
+  content: "";
+  display: block;
+  height: 100% !important;
+  width: 100% !important;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.add-black-layer::after {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.add-light-layer::after {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.loader {
+  margin: 20% auto;
+  border: 0.5rem solid #ddd;
+  border-radius: 50%;
+  border-top: 0.5rem solid #c69a79;
+  width: 5rem;
+  height: 5rem;
+  -webkit-animation: spin 2s linear infinite;
+  /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.diff-font {
+  font-family: "Abdo-Salem" !important;
+  color: #c69a79 !important;
+}
+.diff-font span {
+  font-family: "Cairo", sans-serif !important;
+}
+
+strong {
+  font-size: 1.5rem !important;
+}
+
+/* ------------ primary colors ------------ */
+/* ------------ light colors ------------ */
+/* ------------ light colors ------------ */
+/* ------------ shadow colors ------------ */
+/* ------------ solid colors ------------ */
+:host .about-us__content section {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 4rem !important;
+  position: relative;
+}
+:host .about-us__content section h2 {
+  position: relative;
+  width: max-content;
+  font-size: 4rem;
+  margin-bottom: 4rem !important;
+}
+:host .about-us__content section .vision {
+  margin-bottom: 4rem;
+}
+:host .about-us__content section.about {
+  background-color: #c69a79;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+:host .about-us__content section.about * {
+  color: #ffffff;
+}
+:host .about-us__content section.vision-and-message .vision h4,
+:host .about-us__content section.vision-and-message .message h4 {
+  margin-bottom: 1rem !important;
+  font-size: 2.5rem;
+}
+:host .about-us__content section.vision-and-message .vision p,
+:host .about-us__content section.vision-and-message .message p {
+  width: 100% !important;
+  padding: 0 4rem !important;
+}
+:host .about-us__content section.why-ksa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+:host .about-us__content section.why-ksa p {
+  width: 60% !important;
+  margin-bottom: 3rem !important;
+  text-align: center;
+}
+:host .about-us__content section.why-ksa .images {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  width: 50rem;
+}
+:host .about-us__content section.why-ksa .images div {
+  width: 100%;
+  height: 35rem;
+  border-radius: 0.5rem !important;
+  background-position: 50% 50% !important;
+  background-size: cover !important;
+  box-shadow: 2px 2px 1px #aaaaaa !important;
+}
+:host .about-us__content section.short-term-rent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+:host .about-us__content section.short-term-rent.services {
+  display: grid;
+  grid-template-columns: 40% 1fr !important;
+  gap: 3rem;
+  align-items: start;
+}
+:host .about-us__content section.short-term-rent.services .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+:host .about-us__content section.short-term-rent.services p {
+  width: 80% !important;
+  text-align: right;
+}
+:host .about-us__content section.short-term-rent.services .icons {
+  grid-template-columns: 1fr 1fr 1fr !important;
+  width: unset !important;
+  padding-top: 11rem;
+}
+:host .about-us__content section.short-term-rent.services .icons .item {
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+:host .about-us__content section.short-term-rent.services .icons .item > img {
+  height: 3.5rem;
+}
+:host .about-us__content section.short-term-rent p {
+  width: 60% !important;
+  margin-bottom: 3rem !important;
+  text-align: center;
+}
+:host .about-us__content section.short-term-rent .icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+  width: 80rem;
+}
+:host .about-us__content section.short-term-rent .icons .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  color: #c69a79 !important;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 1px #eeeeee !important;
+}
+:host .about-us__content section.short-term-rent .icons .item .images-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5rem;
+}
+:host .about-us__content section.short-term-rent .icons .item .images-list img {
+  height: 2.25rem;
+  filter: drop-shadow(1px 1px 0px #000000);
+}
+:host .about-us__content section.short-term-rent .icons .item > img {
+  height: 5rem;
+  filter: drop-shadow(1px 1px 0px #000000);
+}
+:host .about-us__content section.short-term-rent .icons .item span {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+:host .about-us__content section.why-short-term-rent {
+  display: flex;
+  flex-direction: column;
+}
+:host .about-us__content section.why-short-term-rent p {
+  width: 60% !important;
+  margin-bottom: 3rem !important;
+}
+:host .about-us__content section.why-short-term-rent .icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+:host .about-us__content section.why-short-term-rent .icons .item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  color: #c69a79 !important;
+}
+:host .about-us__content section.why-short-term-rent .icons .item .img {
+  padding: 1rem;
+  width: 5rem;
+  height: 5rem;
+}
+:host .about-us__content section.why-short-term-rent .icons .item .img img {
+  width: 100%;
+  filter: drop-shadow(1px 1px 0px #000000);
+}
+:host .about-us__content section.why-short-term-rent .icons .item span {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+:host .about-us__content section.why-short-term-rent .chart {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+  width: 60%;
+  margin: 3rem auto !important;
+}
+:host .about-us__content section.why-short-term-rent .chart p-chart {
+  background: #f5f5f5;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 1px #eeeeee !important;
+}
+:host .about-us__content section.why-short-term-rent .chart h3 {
+  text-align: center;
+  color: #af553b;
+  font-size: 3rem;
+  font-weight: bold;
+}
+:host .about-us__content section.why-short-term-rent .chart h3 span {
+  display: block;
+  color: #c69a79 !important;
+}
+:host .about-us__content section.steps h4 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem !important;
+}
+:host .about-us__content section.steps .step {
+  margin-bottom: 3rem;
+  position: relative;
+}
+:host .about-us__content section.steps .items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 16%;
+  right: 16%;
+  top: 85%;
+}
+:host .about-us__content section.steps .items .item {
+  color: #c69a79 !important;
+  display: block;
+  font-size: 1.125rem;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+}
+:host .about-us__content section p {
+  font-size: 1.5rem;
+  width: 50%;
+}
