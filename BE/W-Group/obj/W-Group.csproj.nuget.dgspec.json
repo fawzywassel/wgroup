@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\smuhamad\\source\\repos\\W-Group\\W-Group\\W-Group.csproj": {}
+    "/Users/fawzywassel/Desktop/wgroup/BE/W-Group/W-Group.csproj": {}
   },
   "projects": {
-    "C:\\Users\\smuhamad\\source\\repos\\W-Group\\W-Group\\W-Group.csproj": {
+    "/Users/fawzywassel/Desktop/wgroup/BE/W-Group/W-Group.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\smuhamad\\source\\repos\\W-Group\\W-Group\\W-Group.csproj",
+        "projectUniqueName": "/Users/fawzywassel/Desktop/wgroup/BE/W-Group/W-Group.csproj",
         "projectName": "W-Group",
-        "projectPath": "C:\\Users\\smuhamad\\source\\repos\\W-Group\\W-Group\\W-Group.csproj",
-        "packagesPath": "C:\\Users\\smuhamad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\smuhamad\\source\\repos\\W-Group\\W-Group\\obj\\",
+        "projectPath": "/Users/fawzywassel/Desktop/wgroup/BE/W-Group/W-Group.csproj",
+        "packagesPath": "/Users/fawzywassel/.nuget/packages/",
+        "outputPath": "/Users/fawzywassel/Desktop/wgroup/BE/W-Group/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\smuhamad\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/fawzywassel/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,7 +32,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net6.0": {
@@ -78,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.200/RuntimeIdentifierGraph.json"
         }
       }
     }

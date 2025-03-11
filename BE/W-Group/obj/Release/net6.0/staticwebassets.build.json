@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "B9Gdr5Zs4qe4pFTnUqszA8UthnAUz8xbspzD7L9fMMI=",
+  "Hash": "aKLvmIQ5wudWZ6JZEWr/bUJKVqHjQOVq4dV8mltyuGQ=",
   "Source": "W-Group",
   "BasePath": "_content/W-Group",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }
